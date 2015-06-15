@@ -1,0 +1,446 @@
+/* PMLP Styles */
+
+
+
+body {
+    /*margin-top: 30px;*/
+    background: #fff;
+    font: 12px Arial !important;
+    color: #036;
+}
+
+
+
+h1 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #196bb8;
+    padding: 2px;
+    margin: 0;
+}
+
+H2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(65, 65, 65);
+}
+
+.HalogenContentHeader {
+    border-bottom: 1px #196bb8 solid;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-top: 10px;
+    font: 14px Arial;
+}
+
+p, li {
+    font-size: 14px;
+    line-height: 21px;
+}
+
+ul, ol {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/*Layout Styles*/
+
+header, .header {
+    background: #1F85C7;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    border-bottom: 5px solid #000;
+}
+
+.spacer {
+    height: 33px;
+}
+
+.footer-spacer {
+    padding: 30px;
+    color: #fff;
+}
+
+.container {
+    -webkit-box-shadow: 2px 0px 58px 2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 0px 58px 2px rgba(0, 0, 0, 0.75);
+    -ms-box-shadow: 2px 0px 58px 2px rgba(0, 0, 0, 0.75);
+    box-shadow: 2px 0px 58px 2px rgba(0, 0, 0, 0.75);
+    padding: 0 !important;
+}
+
+.modal-dialog {
+    max-width: 970px !important;
+}
+
+.well {
+    background: #fff;
+}
+
+.form-wrapper {
+    padding: 20px 29px;
+    background: #fff;
+    max-width: 977px;
+    border: 1px solid #000;
+}
+
+.form-container {
+    border: solid 3px #a4a4a4;
+    padding: 13px 15px;
+    background: #fff;
+    -ms-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+}
+
+footer {
+    font-size: 10px;
+    background: black;
+    padding: 26px;
+}
+
+.disclaimer {
+    margin: 90px -25px -20px -25px;
+    font-size: 10px;
+}
+
+/*form styles*/
+
+.step {
+    display: none;
+}
+
+.progress {
+    background-image: -webkit-linear-gradient(top,#bbbbbb 0,#bbbbbb 100%);
+    background-image: linear-gradient(to bottom,#bbbbbb 0,#bbbbbb 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffbbbbbb',endColorstr='#bbbbbb',GradientType=0);
+    height: 13px;
+    margin-bottom: 0px;
+}
+
+.progress-bar {
+    background-image: -webkit-linear-gradient(top,#A8A8A8 0,#888888 60%);
+    background-image: linear-gradient(to bottom,#A8A8A8 0,#888888 60%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff428bca',endColorstr='#ff3071a9',GradientType=0);
+}
+
+.subtitle {
+    font-size: 14px;
+}
+
+label {
+    color: #000;
+    font-weight: bold;
+}
+
+    label.alt {
+        color: #003366;
+        font-weight: bold;
+    }
+
+.error {
+    color: red;
+}
+
+
+/*Hide elements*/
+.militaryStatus, .militaryInstallationOrBase, .education, .isMilitary, .addressPane, .txtRegion, .txtPostalCode, .milBaseNotListed, .hsNotListedWrap, .militaryRb {
+    display: none;
+}
+
+/*Bootstrap Overrides*/
+.form-group {
+    margin-bottom: 9px;
+}
+
+.navigation_button {
+    display: inline-block;
+    padding: 1px 10px;
+    background-color: #0970d0;
+    border: 1px solid #ddd;
+    border-radius: 1px;
+    color: #fff;
+    font: bold 14px Arial;
+    text-transform: uppercase;
+    border-top: solid 1px #61c8f0;
+    border-right: solid 1px #0248ba;
+    border-bottom: solid 1px #0030a8;
+    border-left: solid 1px #2098e0;
+    box-shadow: 0 1px 3px #999;
+    text-shadow: 0 -1px 1px #222;
+    float: right;
+}
+
+
+
+    .navigation_button.ui-state-disabled {
+        display: inline-block;
+        padding: 1px 10px;
+        background: #053d70;
+        border: 1px solid #ddd;
+        border-radius: 1px;
+        color: #fff;
+        font: bold 14px Arial;
+        text-transform: uppercase;
+        border-top: solid 1px #61c8f0;
+        border-right: solid 1px #0248ba;
+        border-bottom: solid 1px #0030a8;
+        border-left: solid 1px #2098e0;
+        box-shadow: 0 1px 3px #999;
+        text-shadow: 0 -1px 1px #222;
+        opacity: .5;
+    }
+
+    .navigation_button:hover {
+        background: #053d70;
+    }
+
+#back {
+    padding-bottom: 15px;
+    display: block;
+    cursor: pointer;
+    text-decoration: underline;
+    border: 0px;
+    background: transparent;
+    color: #196bb8;
+    font-size: 11px;
+    font-family: Arial;
+}
+
+    #back:disabled {
+        -ms-opacity: 0;
+        opacity: 0;
+    }
+
+a.privacy-policy {
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.privacy-policy-text {
+    font-size: 11px;
+}
+
+/*Utilities*/
+
+.padding-left-0 {
+    padding-left: 0;
+}
+
+.padding-left-5 {
+    padding-left: 5px;
+}
+
+.padding-left-10 {
+    padding-left: 10px;
+}
+
+.padding-left-15 {
+    padding-left: 15px;
+}
+
+.padding-right-0 {
+    padding-right: 0;
+}
+
+.padding-right-5 {
+    padding-right: 5px;
+}
+
+.padding-right-10 {
+    padding-right: 10px;
+}
+
+.padding-right-15 {
+    padding-right: 15px;
+}
+
+.margin0 {
+    margin: 0;
+}
+
+.margin-right-10 {
+    margin-right: 10px;
+}
+
+.margin-left-neg20 {
+    margin-left: 20px;
+}
+
+.margin-neg-20 {
+    margin: -20px;
+}
+
+.margin-left-0 {
+    margin-left: 0;
+}
+
+.margin-right-0 {
+    margin-right: 0;
+}
+
+
+
+.data {
+    background: white;
+}
+
+.white-text {
+    color: #ffffff;
+}
+
+.uti-blue {
+    background: #196bb8;
+}
+/*Bootstrap*/
+
+input[disabled], select[disabled], textarea[disabled], input[readonly], select[readonly], textarea[readonly] {
+    background-color: lightgrey !important;
+}
+
+.form-control {
+    height: 22px;
+    padding: 0;
+    border-radius: 0;
+    font-size: 13px;
+    font-family: Arial;
+}
+
+
+
+input, select {
+    margin-bottom: 0;
+}
+
+label {
+    margin-bottom: 0px;
+}
+
+.p1 {
+    padding-right: 0;
+}
+
+.p2, .p3 {
+    padding-right: 0;
+    padding-left: 10px;
+}
+
+input, select {
+    margin-bottom: 0;
+}
+
+label {
+    margin-bottom: 0px;
+}
+
+.p1 {
+    padding-right: 0;
+}
+
+.p2, .p3 {
+    padding-right: 0;
+    padding-left: 15px;
+}
+
+
+
+/*MEDIA QUERIES*/
+@media only screen and (max-width : 770px) {
+    /*body {
+        margin: 20px;
+    }*/
+
+  
+
+}
+
+@media screen and (max-width : 991px) {
+
+    .form-control {
+        height: 55px;
+        border: 1px solid #ccc;
+        -ms-border-radius: 4px;
+        border-radius: 4px;
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    input#next {
+        width: 100%;
+        height: 55px;
+        font-size: 1.5em;
+    }
+
+    .progress {
+        height: 30px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 2000px) {
+    .modal-dialog {
+        width: 80%;
+        margin: 30px auto;
+    }
+
+    .container {
+        -webkit-box-shadow: 2px 0px 58px 40px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 2px 0px 58px 40px rgba(0, 0, 0, 0.75);
+        box-shadow: 2px 0px 58px 40px rgba(0, 0, 0, 0.75);
+        padding: 0 !important;
+    }
+}
+
+
+
+@media screen and (max-width : 768px) {
+
+    .img-responsive {
+        display: block;
+    }
+
+    #phone1, #phone2, #phone3, #phoneAlt1, #phoneAlt2, #phoneAlt3 {
+        width: 28%;
+        margin-bottom: 10px;
+    }
+
+    #phone .form-control, #phoneAlt .form-control {
+        width: 100%;
+    }
+
+
+
+    label {
+        font-size: 18px;
+    }
+
+        label.alt {
+            font-size: 15px;
+        }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .progressbar-subtitle {
+        font-size: 1.2em;
+    }
+}
+
+
+@media screen and (min-width : 991px) {
+
+    /* phone override*/
+    /*#phone .form-control, #phoneAlt .form-control {
+        width: auto !important;
+    }*/
+}
+
+
+.container {
+    max-width: 970px !important;
+}

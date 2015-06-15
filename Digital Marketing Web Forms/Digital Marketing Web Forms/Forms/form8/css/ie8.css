@@ -1,0 +1,10 @@
+﻿.header { margin-bottom: 20px;}
+INPUT[disabled] { background-color:transparent !important ;}
+.container{ 
+    box-shadow: 2px 0px 58px 40px rgba(0, 0, 0, 0.75);
+          behavior:url(css/pie/PIE.htc);
+}
+
+.militaryRb label { display: block;}
+
+.col-md-6 { width: 48%;float: left;}
