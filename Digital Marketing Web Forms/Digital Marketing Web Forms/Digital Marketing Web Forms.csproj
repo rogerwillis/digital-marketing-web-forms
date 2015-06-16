@@ -161,6 +161,10 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="Forms\form8\css\2E78631C47F73B5BA.css" />
+    <Content Include="Forms\form8\css\ie.css" />
+    <Content Include="Forms\form8\img\ra_red.png" />
+    <Content Include="Forms\form8\img\ra_white.png" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -168,9 +172,96 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Forms\form8\css\bootstrap-theme.min.css" />
     <Content Include="Forms\form8\css\bootstrap.min.css" />
+    <Content Include="Forms\form8\css\combinedgeneral.css" />
+    <Content Include="Forms\form8\css\combinedmain.css" />
+    <Content Include="Forms\form8\css\font-awesome.css" />
+    <Content Include="Forms\form8\css\font-awesome.min.css">
+      <DependentUpon>font-awesome.css</DependentUpon>
+    </Content>
     <Content Include="Forms\form8\css\ie8.css" />
     <Content Include="Forms\form8\css\style-stage.css" />
     <Content Include="Forms\form8\css\style.css" />
+    <Content Include="Forms\form8\css\style.min.css">
+      <DependentUpon>style.css</DependentUpon>
+    </Content>
+    <Content Include="Forms\form8\img\arrow_totop.png" />
+    <Content Include="Forms\form8\img\bg-content.png" />
+    <Content Include="Forms\form8\img\glare-effect.png" />
+    <Content Include="Forms\form8\img\hdrLeft_bg.png" />
+    <Content Include="Forms\form8\img\hdrMiddle_bg.png" />
+    <Content Include="Forms\form8\img\hdrMiddle_bg_aquablue.png" />
+    <Content Include="Forms\form8\img\hdrMiddle_bg_black.png" />
+    <Content Include="Forms\form8\img\hdrMiddle_bg_blue.jpg" />
+    <Content Include="Forms\form8\img\hdrMiddle_bg_blue.png" />
+    <Content Include="Forms\form8\img\hdrMiddle_bg_bondiblue.png" />
+    <Content Include="Forms\form8\img\hdrMiddle_bg_green.png" />
+    <Content Include="Forms\form8\img\hdrMiddle_bg_marigold.png" />
+    <Content Include="Forms\form8\img\hdrMiddle_bg_navyblue.png" />
+    <Content Include="Forms\form8\img\hdrMiddle_bg_orange.png" />
+    <Content Include="Forms\form8\img\hdrMiddle_bg_palegreen.png" />
+    <Content Include="Forms\form8\img\hdrMiddle_bg_paleyellow.png" />
+    <Content Include="Forms\form8\img\hdrMiddle_bg_yellow.png" />
+    <Content Include="Forms\form8\img\hdrRight_bgs.png" />
+    <Content Include="Forms\form8\img\hoverLinkSprite.png" />
+    <Content Include="Forms\form8\img\RITY.jpg" />
+    <Content Include="Forms\form8\img\shadow-down.png" />
+    <Content Include="Forms\form8\img\shadow-up.png" />
+    <Content Include="Forms\form8\index - Copy.html" />
+    <Content Include="Forms\form8\js\app.min.js">
+      <DependentUpon>app.js</DependentUpon>
+    </Content>
+    <Content Include="Forms\form8\js\bbq.min.js">
+      <DependentUpon>bbq.js</DependentUpon>
+    </Content>
+    <Content Include="Forms\form8\js\environment.config.min.js">
+      <DependentUpon>environment.config.js</DependentUpon>
+    </Content>
+    <Content Include="Forms\form8\js\jquery-ui.js" />
+    <Content Include="Forms\form8\js\jquery-ui.min.js">
+      <DependentUpon>jquery-ui.js</DependentUpon>
+    </Content>
+    <Content Include="Forms\form8\js\jquery.form.min.js">
+      <DependentUpon>jquery.form.js</DependentUpon>
+    </Content>
+    <Content Include="Forms\form8\js\jquery.form.wizard.min.js">
+      <DependentUpon>jquery.form.wizard.js</DependentUpon>
+    </Content>
+    <Content Include="Forms\form8\js\jquery.uti.autotab.min.js">
+      <DependentUpon>jquery.uti.autotab.js</DependentUpon>
+    </Content>
+    <Content Include="Forms\form8\js\jquery.uti.ui.forms.min.js">
+      <DependentUpon>jquery.uti.ui.forms.js</DependentUpon>
+    </Content>
+    <Content Include="Forms\form8\js\jquery.validate.min.js">
+      <DependentUpon>jquery.validate.js</DependentUpon>
+    </Content>
+    <Content Include="Forms\form8\js\js1.js">
+      <DependentUpon>js1.js.bundle</DependentUpon>
+    </Content>
+    <Content Include="Forms\form8\js\js1.min.js">
+      <DependentUpon>js1.js</DependentUpon>
+    </Content>
+    <Content Include="Forms\form8\js\Lead\leads.js">
+      <DependentUpon>leads.js.bundle</DependentUpon>
+    </Content>
+    <Content Include="Forms\form8\js\Lead\leads.min.js">
+      <DependentUpon>leads.js</DependentUpon>
+    </Content>
+    <Content Include="Forms\form8\js\utiedu\jquery-easing.js" />
+    <Content Include="Forms\form8\js\utiedu\jquery.fancybox.js" />
+    <Content Include="Forms\form8\js\utiedu\jquery.noconflict.js" />
+    <Content Include="Forms\form8\js\utiedu\jquery.scrollTo.min.js" />
+    <Content Include="Forms\form8\js\utiedu\kalypso_script.js" />
+    <Content Include="Forms\form8\js\utiedu\megamenu.js" />
+    <Content Include="Forms\form8\js\utiedu\plugins.js" />
+    <Content Include="Forms\form8\js\utiedu\utiCustomv2.js" />
+    <Content Include="Forms\form8\js\utiedu\utiedu.js">
+      <DependentUpon>utiedu.js.bundle</DependentUpon>
+    </Content>
+    <Content Include="Forms\form8\js\utiedu\utiedu.min.js">
+      <DependentUpon>utiedu.js</DependentUpon>
+    </Content>
+    <Content Include="Forms\form8\thankyou\index.html" />
     <Content Include="Forms\form8\index.html" />
     <Content Include="Forms\form8\img\30-relationships.jpg" />
     <Content Include="Forms\form8\img\feature-3milguys.jpg" />
@@ -193,10 +284,6 @@
     <Content Include="Forms\form8\js\app.js" />
     <Content Include="Forms\form8\js\bbq.js" />
     <Content Include="Forms\form8\js\bootstrap.min.js" />
-    <Content Include="Forms\form8\js\dist\all.js" />
-    <Content Include="Forms\form8\js\dist\all.min.js" />
-    <Content Include="Forms\form8\js\dist\lead.js" />
-    <Content Include="Forms\form8\js\dist\lead.min.js" />
     <Content Include="Forms\form8\js\environment.config.js" />
     <Content Include="Forms\form8\js\jquery-migrate-1.2.1.min.js" />
     <Content Include="Forms\form8\js\jquery.form.js" />
@@ -209,7 +296,6 @@
     <Content Include="Forms\form8\js\Lead\bu-old\get.js" />
     <Content Include="Forms\form8\js\Lead\bu-old\jquery.cookie.js" />
     <Content Include="Forms\form8\js\Lead\bu-old\jquery.uti.emailvalidation.js" />
-    <Content Include="Forms\form8\js\Lead\jquery.uti.completer.bootstrap.adapter.js" />
     <Content Include="Forms\form8\js\Lead\jquery.uti.completer.jquery.adapter.js" />
     <Content Include="Forms\form8\js\Lead\jquery.uti.completer.js" />
     <Content Include="Forms\form8\js\Lead\jquery.uti.ui.legal.js" />
@@ -219,28 +305,54 @@
     <Content Include="Forms\form8\js\Lead\jquery.uti.ui.lookup.highschoolname.js" />
     <Content Include="Forms\form8\js\Lead\jquery.uti.ui.lookup.military.js" />
     <Content Include="Forms\form8\js\Lead\jquery.uti.zipcode.completer.js" />
-    <Content Include="Forms\form8\js\old-bu\app-stage.js" />
-    <Content Include="Forms\form8\js\old-bu\app04272015.js" />
-    <Content Include="Forms\form8\js\old-bu\BU_jquery.uti.ui.forms.js" />
-    <Content Include="Forms\form8\js\old-bu\jquery.autotab.min.js" />
-    <Content Include="Forms\form8\js\old-bu\jquery.uti.autotab-stage.js" />
-    <Content Include="Forms\form8\js\qa-stage\app.js" />
-    <Content Include="Forms\form8\js\used\app.js" />
-    <Content Include="Forms\form8\js\used\bbq.js" />
-    <Content Include="Forms\form8\js\used\bootstrap.min.js" />
-    <Content Include="Forms\form8\js\used\environment.config.js" />
-    <Content Include="Forms\form8\js\used\jquery-migrate-1.2.1.min.js" />
-    <Content Include="Forms\form8\js\used\jquery.form.js" />
-    <Content Include="Forms\form8\js\used\jquery.form.wizard.js" />
-    <Content Include="Forms\form8\js\used\jquery.uti.autotab.js" />
-    <Content Include="Forms\form8\js\used\jquery.uti.ui.forms.js" />
-    <Content Include="Forms\form8\js\used\jquery.validate.js" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Account\Web.config" />
     <Content Include="Forms\form8\css\style.css.old" />
+    <Content Include="Forms\form8\js\app.min.js.map">
+      <DependentUpon>app.min.js</DependentUpon>
+    </Content>
+    <Content Include="Forms\form8\js\bbq.min.js.map">
+      <DependentUpon>bbq.min.js</DependentUpon>
+    </Content>
+    <Content Include="Forms\form8\js\environment.config.min.js.map">
+      <DependentUpon>environment.config.min.js</DependentUpon>
+    </Content>
+    <Content Include="Forms\form8\js\jquery.form.min.js.map">
+      <DependentUpon>jquery.form.min.js</DependentUpon>
+    </Content>
+    <Content Include="Forms\form8\js\jquery.form.wizard.min.js.map">
+      <DependentUpon>jquery.form.wizard.min.js</DependentUpon>
+    </Content>
+    <Content Include="Forms\form8\js\jquery.uti.autotab.min.js.map">
+      <DependentUpon>jquery.uti.autotab.min.js</DependentUpon>
+    </Content>
+    <Content Include="Forms\form8\js\jquery.uti.ui.forms.min.js.map">
+      <DependentUpon>jquery.uti.ui.forms.min.js</DependentUpon>
+    </Content>
+    <Content Include="Forms\form8\js\jquery.validate.min.js.map">
+      <DependentUpon>jquery.validate.min.js</DependentUpon>
+    </Content>
+    <Content Include="Forms\form8\js\js1.js.bundle">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Forms\form8\js\js1.min.js.map">
+      <DependentUpon>js1.min.js</DependentUpon>
+    </Content>
+    <Content Include="Forms\form8\js\Lead\leads.js.bundle" />
+    <Content Include="Forms\form8\js\Lead\leads.min.js.map">
+      <DependentUpon>leads.min.js</DependentUpon>
+    </Content>
+    <Content Include="Forms\form8\js\utiedu\megamenu_plugins.js" />
+    <Content Include="Forms\form8\js\utiedu\utiedu.js.bundle" />
+    <Content Include="Forms\form8\js\utiedu\utiedu.min.js.map">
+      <DependentUpon>utiedu.min.js</DependentUpon>
+    </Content>
+    <Content Include="Forms\form8\js\jquery-ui.min.js.map">
+      <DependentUpon>jquery-ui.min.js</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -291,90 +403,105 @@
   <ItemGroup>
     <Compile Include="Account\AddPhoneNumber.aspx.cs">
       <DependentUpon>AddPhoneNumber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Account\AddPhoneNumber.aspx.designer.cs">
       <DependentUpon>AddPhoneNumber.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\Confirm.aspx.cs">
       <DependentUpon>Confirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Account\Confirm.aspx.designer.cs">
       <DependentUpon>Confirm.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\Forgot.aspx.cs">
       <DependentUpon>Forgot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Account\Forgot.aspx.designer.cs">
       <DependentUpon>Forgot.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\Lockout.aspx.cs">
       <DependentUpon>Lockout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Account\Lockout.aspx.designer.cs">
       <DependentUpon>Lockout.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Account\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\Manage.aspx.cs">
       <DependentUpon>Manage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Account\Manage.aspx.designer.cs">
       <DependentUpon>Manage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\ManageLogins.aspx.cs">
       <DependentUpon>ManageLogins.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Account\ManageLogins.aspx.designer.cs">
       <DependentUpon>ManageLogins.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\ManagePassword.aspx.cs">
       <DependentUpon>ManagePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Account\ManagePassword.aspx.designer.cs">
       <DependentUpon>ManagePassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\OpenAuthProviders.ascx.cs">
       <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Account\OpenAuthProviders.ascx.designer.cs">
       <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
     </Compile>
     <Compile Include="Account\Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Account\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\RegisterExternalLogin.aspx.cs">
       <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Account\RegisterExternalLogin.aspx.designer.cs">
       <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\ResetPassword.aspx.cs">
       <DependentUpon>ResetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Account\ResetPassword.aspx.designer.cs">
       <DependentUpon>ResetPassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\ResetPasswordConfirmation.aspx.cs">
       <DependentUpon>ResetPasswordConfirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Account\ResetPasswordConfirmation.aspx.designer.cs">
       <DependentUpon>ResetPasswordConfirmation.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\TwoFactorAuthenticationSignIn.aspx.cs">
       <DependentUpon>TwoFactorAuthenticationSignIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Account\TwoFactorAuthenticationSignIn.aspx.designer.cs">
       <DependentUpon>TwoFactorAuthenticationSignIn.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\VerifyPhoneNumber.aspx.cs">
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
@@ -418,6 +545,7 @@
     </Compile>
     <Compile Include="Site.Mobile.Master.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
@@ -425,6 +553,7 @@
     <Compile Include="Startup.cs" />
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
@@ -435,9 +564,7 @@
     <Folder Include="Forms\form8\css\pie\" />
     <Folder Include="Forms\form8\css\_notes\" />
     <Folder Include="Forms\form8\img\logos\_notes\" />
-    <Folder Include="Forms\form8\js\combined\" />
     <Folder Include="Forms\form8\js\Lead\_notes\" />
-    <Folder Include="Forms\form8\js\_notes\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -454,7 +581,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>18280</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:18280/</IISUrl>
+          <IISUrl>http://localhost:39540/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

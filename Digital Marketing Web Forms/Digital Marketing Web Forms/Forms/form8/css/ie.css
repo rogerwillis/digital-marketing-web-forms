@@ -1,0 +1,5 @@
+/*
+Title:   IE Fixes Css File
+Author:  http://uti.edu // Roger Willis
+Description: This is the stylesheet that holds the fixes for IE (the stupidest browsers ever made)  */
+ .programs img, .ie10plus .programs {width:100% !Important;}
