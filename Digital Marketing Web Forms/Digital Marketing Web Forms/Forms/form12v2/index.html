@@ -1,0 +1,364 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>JQuery Form Wizard</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    </meta>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <style type="text/css">
+        .step label {
+            color: #666;
+        }
+
+        #demoWrapper {
+            padding: 1em;
+            width: 500px;
+            border-style: solid;
+        }
+
+        #fieldWrapper {
+        }
+
+        #demoNavigation {
+            margin-top: 0.5em;
+            margin-right: 1em;
+            text-align: right;
+        }
+
+        #data {
+            font-size: 0.7em;
+        }
+
+        input {
+            margin-right: 0.1em;
+            margin-bottom: 0.5em;
+        }
+
+        .input_field_25em {
+            width: 2.5em;
+        }
+
+        .input_field_3em {
+            width: 3em;
+        }
+
+        .input_field_35em {
+            width: 3.5em;
+        }
+
+        .input_field_12em {
+            width: 12em;
+        }
+
+        label {
+            margin-bottom: 0.2em;
+            font-weight: bold;
+            font-size: 0.8em;
+        }
+
+            label.error {
+                color: red;
+                font-size: 0.8em;
+                margin-left: 0.5em;
+            }
+
+        .step span {
+            float: right;
+            font-weight: bold;
+            padding-right: 0.8em;
+        }
+
+        .navigation_button {
+            width: 70px;
+        }
+
+        #data {
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="demoWrapper">
+        <h3>UTI Branching Example</h3>
+
+        <hr />
+        <h5 id="status"></h5>
+        <form id="demoForm" method="post" action="json.html" class="bbq">
+            <div id="fieldWrapper">
+                <div class="step" id="first">
+                    <span class="font_normal_07em_black">Area of Interest</span><br />
+                    <label class="label">Area of Interest</label>
+
+
+                    <label class="input select" id="show-elements-interest">
+                        <select name="Interest" id="Interest" required=required>
+                            <option value="none"  disabled="" required=required>select area of interest</option>
+                            <option value="AU" selected="">Automotive Technician</option>
+                            <option value="MO">Motorcycle Technician</option>
+                            <option value="DI">Diesel / Industrial</option>
+                            <option value="CR">Collision &amp; Auto Body</option>
+                            <option value="NASCAR">Nascar Technician &amp; Pit Crew Training</option>
+                            <option value="MA">Marine Mechanic Training</option>
+                        </select>
+                        <i></i>
+                    </label>
+                    <hr />
+
+
+                    <!-- Country -->
+                    <div class="col-md-6 col-sm-6">
+                        <label for="country" class="alt">Country:</label>
+                        <select id="country" name="country" class="form-control" required=required></select>
+                    </div>
+    
+                    <!-- zip code 1-->
+                    <div class="span4 unit">
+                        <label class="label">Zip code</label>
+                        <div class="input">
+                            <label class="icon-right" for="zipCodePre"> <i class="fa fa-bookmark-o"></i> </label>
+                            <input type="text" id="zipCodePre" name="zip" required=required />
+                        </div>
+
+                    </div>
+                </div>
+                <div id="military-education" class="step">
+                    <span class="font_normal_07em_black">Personal Information</span><br />
+
+                    <!-- start name -->
+                    <div class="row">
+
+                        <!-- first name -->
+                        <div class="unit unit-first-name span5">
+                            <label class="label">First name</label>
+                            <div class="input">
+                                <label class="icon-right" for="firstName"> <i class="fa fa-user"></i> </label>
+                                <input type="text" id="firstName" name="firstName" required=required />
+                            </div>
+                        </div>
+
+                        <!-- last name -->
+                        <div class="unit unit-last-name span4">
+                            <label class="label">Last name</label>
+                            <div class="input">
+                                <label class="icon-right" for="lastName"> <i class="fa fa-user"></i> </label>
+                                <input type="text" id="lastName" name="lastName" required=required />
+                            </div>
+                        </div>
+
+                        <!-- phone / email -->
+                        <div class="span12 unit">
+                            <label class="label">Phone</label>
+                            <div class="input">
+                                <label class="icon-right" for="phone"> <i class="fa fa-phone"></i> </label>
+                                <input type="text" id="phone" name="phone" required=required />
+                            </div>
+                        </div>
+                        <div class="span6 unit">
+                            <label class="label">Email</label>
+                            <div class="input">
+                                <label class="icon-right" for="email"> <i class="fa fa-envelope-o"></i> </label>
+                                <input type="email" placeholder="Email" id="email" name="email" required=required />
+                            </div>
+                        </div>
+                        <div class="span6 unit">
+                            <label class="label">Confirm Email</label>
+                            <div class="input">
+                                <label class="icon-right" for="email2"> <i class="fa fa-envelope-o"></i> </label>
+                                <input type="email" placeholder="Confirm Email" id="email2" name="email2" required=required />
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="container-age">
+                        <label class="label">Age</label>
+                        <input name="age" id="age" required=required maxlength="2" />
+                    </div>
+                    <hr />
+                    <!-- start inline radio -->
+                    <div class="unit span12">
+                        <div class="divider gap-bottom-25"></div>
+                        <div class="inline-group">
+                            <label class="label">Are you Current U.S. Military, Veteran, Guard or Reserves?</label>
+                            <label for="rbMilitaryYes">Military: Yes</label>
+                            <input id="rbMilitaryYes" type="radio" class="link required" rel="Yes" name="military" />
+                            <br />
+                            <label for="rbMilitaryNo">Military: No</label>
+                            <input id="rbMilitaryNo" type="radio" class="link" rel="No" name="military" required=required />
+                        </div>
+                    </div>
+
+
+
+                    <hr />
+
+                    <div class="span4 unit">
+                        <label class="label">Zip code</label>
+                        <div class="input">
+                            <label class="icon-right" for="zipCode"> <i class="fa fa-bookmark-o"></i> </label>
+                            <input type="text" id="zipCode" name="zip" required=required />
+                        </div>
+
+                    </div>
+
+
+                    <div class="input">
+                        City
+                        <input type="text" id="city" name="city" required=required />
+                    </div>
+
+
+                    <div class="input">
+                        <select id="state" name="state" required=required>
+                            <option selected=selected>
+                                select state
+                            </option>
+                        </select>
+                    </div>
+
+
+
+                </div>
+
+                <!-- Branching -->
+                <!--Military-->
+                <div id="military" class="step">
+                    <span class="font_normal_07em_black">Military - Additional information</span><br />
+
+
+
+                    <div class="container-mil-state">
+                        <select id="military-states" name="military-states"></select>
+                    </div>
+                    <hr />
+
+
+                    <div class="container-mil-name">
+                        <select id="military-installation" name="military-installation" required=required></select>
+                    </div>
+                    <hr />
+
+                    <div class="container-installation-not-listed hidden">
+                        <label>
+                            If your installation is not listed, please type it here:
+                            <input name="hs-not-listed" id="hs-not-listed" required=required />
+                        </label>
+                    </div>
+
+                    <hr />
+
+                    <div class="container-mil-separation-date">
+                        <label for="mil-separation-date">
+                            Separation Date
+                            <input name="mil-separation-date" id="mil-separation-date" required=required />
+                        </label>
+                    </div>
+
+                </div>
+                <!-- Education -->
+                <div id="education" class="step">
+                    <span class="font_normal_07em_black">Education</span> <br />
+                    <select name="EducationLevel" id="ddlEducation" class="form-control" required=required>
+                        <option selected="selected" value="">Select...</option>
+                        <option value="HS Grad">High School Student or Graduate</option>
+                        <option value="Home School">Home School</option>
+                        <option value="GED">GED</option>
+                        <option value="No Equivalent">None of the above</option>
+                    </select>
+                    <hr />
+                    <div class="container-education hidden">
+                        <div class="container-grad-date">
+                            <label for="hs-grad-date">
+                                Graduation Date
+                                <input name="hs-grad-gate" id="hs-grad-date" />
+                            </label>
+                        </div>
+                        <hr />
+                        <div class="container-state">
+                            <select id="hs-state" name="hs-state">
+                                <option> Select State </option>
+                                <option value="state1">State1</option>
+                                <option value="state2">State2</option>
+                                <option value="state3">State3</option>
+                            </select>
+                        </div>
+                        <hr />
+                        <div class="container-hs-city">
+                            <select id="hs-city" name="hs-city">
+                                <option> Select City </option>
+                                <option value="city1">City1</option>
+                                <option value="city2">City2</option>
+                                <option value="city3">City3</option>
+                            </select>
+                        </div>
+                        <hr />
+                        <div class="container-hs-name">
+                            <select id="hs-city" name="hs-name">
+                                <option> Select City </option>
+                                <option value="city1">City1</option>
+                                <option value="city2">City2</option>
+                                <option value="city3">City3</option>
+                                <option value="not-listed">High School Not Listed</option>
+                            </select>
+                        </div>
+                        <hr />
+
+                        <div class="container-hs-not-listed hidden">
+                            <label>
+                                High School Not Listed?
+                                <input name="hs-not-listed" id="hs-not-listed" />
+                            </label>
+                        </div>
+                        <hr />
+
+                    </div>
+                </div>
+            </div>
+            <div id="demoNavigation">
+                <input class="navigation_button" id="back" value="Back" type="reset" />
+                <input class="navigation_button" id="next" value="Next" type="submit" />
+            </div>
+            <div class="status"></div>
+        </form>
+        <hr />
+        <p id="data"></p>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.8.5.custom.min.js"></script>
+    <script type="text/javascript" src="http://utiforms.s3.amazonaws.com/form6/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.form.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.v13.js"></script>
+    <script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
+    <script type="text/javascript" src="js/bbq.js"></script>
+
+    <script type="text/javascript" src="js/jquery.form.wizard.js"></script>
+
+    <!-- API JS -->
+    <script type="text/javascript" src="http://utiforms.s3.amazonaws.com/common/js/environment.config.js"></script>
+
+    <script type="text/javascript" src="http://utiforms.s3.amazonaws.com/form6/js/Lead/jquery.uti.completer.js"></script>
+    <script type="text/javascript" src="http://utiforms.s3.amazonaws.com/form6/js/Lead/jquery.uti.completer.jquery.adapter.js"></script>
+    <script type="text/javascript" src="http://utiforms.s3.amazonaws.com/form6/js/Lead/jquery.uti.zipcode.completer.js"></script>
+
+    <script type="text/javascript" src="http://utiforms.s3.amazonaws.com/form6/js/Lead/jquery.uti.ui.legal.js"></script>
+    <script type="text/javascript" src="http://utiforms.s3.amazonaws.com/form6/js/Lead/jquery.uti.ui.lists.highschoolstates.js"></script>
+    <script type="text/javascript" src="http://utiforms.s3.amazonaws.com/form6/js/Lead/jquery.uti.ui.lists.countries.js"></script>
+    <script type="text/javascript" src="http://utiforms.s3.amazonaws.com/form6/js/Lead/jquery.uti.ui.lookup.highschoolcity.js"></script>
+    <script type="text/javascript" src="http://utiforms.s3.amazonaws.com/form6/js/Lead/jquery.uti.ui.lookup.highschoolname.js"></script>
+    <script type="text/javascript" src="http://utiforms.s3.amazonaws.com/form6/js/Lead/jquery.uti.ui.lookup.military.js"></script>
+
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="http://utiforms.s3.amazonaws.com/common/js/jquery.uti.ui.forms.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-url-parser/2.3.1/purl.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.2/jquery.xdomainrequest.min.js"></script>
+
+
+
+
+
+</body>
+</html>
