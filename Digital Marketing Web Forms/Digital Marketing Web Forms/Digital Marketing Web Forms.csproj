@@ -161,8 +161,48 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
-    <Content Include="Forms\form8\css\2E78631C47F73B5BA.css" />
+    <Content Include="Forms\form12v2\index.html" />
+    <Content Include="Forms\form12v2\js\app.js" />
+    <Content Include="Forms\form12v2\js\bbq.js" />
+    <Content Include="Forms\form12v2\js\jquery-1.4.2.min.js" />
+    <Content Include="Forms\form12v2\js\jquery-ui-1.8.5.custom.min.js" />
+    <Content Include="Forms\form12v2\js\jquery.form.js" />
+    <Content Include="Forms\form12v2\js\jquery.form.wizard.js" />
+    <Content Include="Forms\form12v2\js\jquery.maskedinput.min.js" />
+    <Content Include="Forms\form12v2\js\jquery.validate.js" />
+    <Content Include="Forms\form12v2\js\jquery.validate.v13.js" />
+    <Content Include="Forms\form12\js\bbq.js" />
+    <Content Include="Forms\form12\js\jquery-1.4.2.min.js" />
+    <Content Include="Forms\form12\js\jquery-ui-1.8.5.custom.min.js" />
+    <Content Include="Forms\form12\js\jquery.form.js" />
+    <Content Include="Forms\form12\js\jquery.form.wizard.js" />
+    <Content Include="Forms\form12\js\jquery.maskedinput.min.js" />
+    <Content Include="Forms\form12\js\jquery.validate.js" />
+    <Content Include="Forms\form12\js\jquery.validate.v13.js" />
+    <Content Include="Forms\form12\index.html" />
+    <Content Include="Forms\form8\bodybottom.html" />
+    <Content Include="Forms\form8\bodybottom.min.html">
+      <DependentUpon>bodybottom.html</DependentUpon>
+    </Content>
+    <Content Include="Forms\form8\bodytop.html" />
+    <Content Include="Forms\form8\bodytop.min.html">
+      <DependentUpon>bodytop.html</DependentUpon>
+    </Content>
     <Content Include="Forms\form8\css\ie.css" />
+    <Content Include="Forms\form8\css\megamenu.css" />
+    <Content Include="Forms\form8\css\responsive-devices.css" />
+    <Content Include="Forms\form8\css\template.css" />
+    <Content Include="Forms\form8\css\utiCustom.css" />
+    <Content Include="Forms\form8\css\utiedu.css">
+      <DependentUpon>utiedu.css.bundle</DependentUpon>
+    </Content>
+    <Content Include="Forms\form8\css\utiedu.min.css">
+      <DependentUpon>utiedu.css</DependentUpon>
+    </Content>
+    <Content Include="Forms\form8\head.html" />
+    <Content Include="Forms\form8\head.min.html">
+      <DependentUpon>head.html</DependentUpon>
+    </Content>
     <Content Include="Forms\form8\img\ra_red.png" />
     <Content Include="Forms\form8\img\ra_white.png" />
     <Content Include="Contact.aspx" />
@@ -171,9 +211,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Forms\form8\css\bootstrap-theme.min.css" />
-    <Content Include="Forms\form8\css\bootstrap.min.css" />
-    <Content Include="Forms\form8\css\combinedgeneral.css" />
-    <Content Include="Forms\form8\css\combinedmain.css" />
+    <Content Include="Forms\form8\css\bootstrap.css" />
     <Content Include="Forms\form8\css\font-awesome.css" />
     <Content Include="Forms\form8\css\font-awesome.min.css">
       <DependentUpon>font-awesome.css</DependentUpon>
@@ -181,9 +219,6 @@
     <Content Include="Forms\form8\css\ie8.css" />
     <Content Include="Forms\form8\css\style-stage.css" />
     <Content Include="Forms\form8\css\style.css" />
-    <Content Include="Forms\form8\css\style.min.css">
-      <DependentUpon>style.css</DependentUpon>
-    </Content>
     <Content Include="Forms\form8\img\arrow_totop.png" />
     <Content Include="Forms\form8\img\bg-content.png" />
     <Content Include="Forms\form8\img\glare-effect.png" />
@@ -207,6 +242,9 @@
     <Content Include="Forms\form8\img\shadow-down.png" />
     <Content Include="Forms\form8\img\shadow-up.png" />
     <Content Include="Forms\form8\index - Copy.html" />
+    <Content Include="Forms\form8\index.min.html">
+      <DependentUpon>index.html</DependentUpon>
+    </Content>
     <Content Include="Forms\form8\js\app.min.js">
       <DependentUpon>app.js</DependentUpon>
     </Content>
@@ -261,7 +299,7 @@
     <Content Include="Forms\form8\js\utiedu\utiedu.min.js">
       <DependentUpon>utiedu.js</DependentUpon>
     </Content>
-    <Content Include="Forms\form8\thankyou\index.html" />
+    <Content Include="Forms\form8\thankyou.html" />
     <Content Include="Forms\form8\index.html" />
     <Content Include="Forms\form8\img\30-relationships.jpg" />
     <Content Include="Forms\form8\img\feature-3milguys.jpg" />
@@ -353,6 +391,7 @@
     <Content Include="Forms\form8\js\jquery-ui.min.js.map">
       <DependentUpon>jquery-ui.min.js</DependentUpon>
     </Content>
+    <Content Include="Forms\form8\css\utiedu.css.bundle" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -561,6 +600,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Forms\form12v2\css\" />
+    <Folder Include="Forms\form12\css\" />
     <Folder Include="Forms\form8\css\pie\" />
     <Folder Include="Forms\form8\css\_notes\" />
     <Folder Include="Forms\form8\img\logos\_notes\" />

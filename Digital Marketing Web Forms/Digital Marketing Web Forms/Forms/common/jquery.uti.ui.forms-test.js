@@ -200,32 +200,35 @@
             /// Add Optimizely info 
             /// Currently, only adds Active Experiments and their Variations
             try {
+                //if (optimizely != null) {
+
                     var accountId, projectId, activeExperimentIds, /*sectionId,*/ variationIds;
 
                     accountId = optimizely.getAccountId();
 
                     if (accountId) {
-                        projectId = optimizely.getProjectId();                        
-                        activeExperimentIds = optimizely.data.state.activeExperiments;                        
-                        
+                        projectId = optimizely.getProjectId();
+                        activeExperimentIds = optimizely.data.state.activeExperiments;
+
                         if (optimizely.data.state.activeExperiments.length > 0) {
 
                             if (accountId) { additionalData += '&Opt_AccountId=' + accountId; }
                             if (projectId) { additionalData += '&Opt_ProjectId=' + projectId; }
 
-                            for (j = 0; j < activeExperimentIds.length; j++) {                                
+                            for (j = 0; j < activeExperimentIds.length; j++) {
                                 var expID = activeExperimentIds[j];
                                 additionalData += '&Opt_ExperimentId_' + (j + 1) + '=' + expID;
 
                                 /// Get Variation of Experiment
                                 var varID = optimizely.data.state.variationIdsMap[expID][0];
                                 additionalData += '&Opt_VariationId=' + varID;
-                            }                                                        
+                            }
                         }
                         else {
                             /// No Active Experiments 
                         }
                     }
+                //}
             }
             catch (e) { }
 

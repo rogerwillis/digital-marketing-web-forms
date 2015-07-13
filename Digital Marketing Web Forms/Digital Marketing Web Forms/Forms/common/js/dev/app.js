@@ -1,4 +1,4 @@
-﻿//Functions
+﻿/// Functions
 
 
 var copyrightDate = function () {
@@ -7,7 +7,7 @@ var copyrightDate = function () {
     var year = d.getFullYear();
     $(".year").text(year);
 
-}
+};
 
 var showUsFields = function () {
 
@@ -59,9 +59,9 @@ var setMaxFieldLengths = function() {
 
 var autoTabbing = function() {
     //auto tabbing
-    //$('.phone-at').autotab();
-    //$('.phoneAlt-at').autotab();
- };
+    //$('#phone-at').autotab();
+    //$('#phoneAlt-at').autotab();
+};
 
 var uiValidate = function () {
 
@@ -305,52 +305,44 @@ var tcpaLangDisplay = function () {
 };
 
 $(document).ready(function () {
-   
-    //Form Widget Plugin Options
+    console.log("a");
+    /// Form Widget Plugin Options
     var uiForm;
 
     uiForm = $('form').uiForm({
-
         // url: activeEnvironment.active + '/api/leads',
         posted: function (evt) {
-
             var host = "http://" + window.location.host;
-
-            window.location.replace(host + "/forms/form8/thankyou/");
+            window.location.replace(host + "/forms/form5/thankyou/");
             //window.location.replace("thankyou.html");
-
         },
-
         failed: function () {
             $('#submitting').modal('hide');
             $("#error .modal-info").text("Sorry there has been an error in the form. Please try again later.");
             $('#error').modal('show');
         }
-
     });
-
+    console.log("z");
 
     var submitForm = function () {
         var tmpComments = "";
 
-
-        //basic info
+        /// basic info
         var firstName = $("#firstName").val();
         var lastName = $("#lastName").val();
         var email = $("#email").val();
         var interestCode = $("#interest").val();
         var dobMonth = $("select[name='dob[Month]']").val();
-        var dobDay = $("select[name='dob[Day]']").val();;
-        var dobYear = $("select[name='dob[Year]']").val();;
+        var dobDay = $("select[name='dob[Day]']").val();
+        var dobYear = $("select[name='dob[Year]']").val();
 
-        //phone
+        /// phone
         var phone = "(" + $("#phone1").val() + ") " + $("#phone2").val() + "-" + $("#phone3").val();
 
-        //alt
+        /// alt
         var txtAltPhone = $("#phoneAlt1").val() && $("#phoneAlt2").val() && $("#phoneAlt3").val() != "" ? "(" + $("#phoneAlt1").val() + ") " + $("#phoneAlt2").val() + "-" + $("#phoneAlt3").val() : "";
 
-
-        //address
+        /// address
         var txtAddress = $("#txtAddress").val();
         var txtCity = $("#txtCity").val();
         var txtRegion = $("#txtRegion").val();
@@ -359,8 +351,7 @@ $(document).ready(function () {
         var postal = $("#postalCode").val();
         var ddlCountry = $("#ddlCountry").val();
 
-
-        //education
+        /// education
         var ddlEducation = $("#ddlEducation").val();
         var gradMonth = $("#gradMonth").val();
         var selectChoiceGradYear = $("#gradYear").val();
@@ -370,8 +361,7 @@ $(document).ready(function () {
         var chkNoHSAttended = $("#chkNoHSAttended").val();
         var hsNameNotListed = $("#txtHighSchoolNotListed").val();
 
-
-        //military
+        /// military
         var isMilitary = $("input[name=milStatus]:checked").val();
         var militarySeparationMonth = $("select[name='MilitarySeparationMonth']").val();
         var militarySeparationYear = $("select[name='MilitarySeparationYear']").val();
@@ -382,42 +372,36 @@ $(document).ready(function () {
 
         var milSepDate = new Date(militarySeparationYear, militarySeparationMonth);
         var militarySeparationDate = militarySeparationYear != "" ? milSepDate : null;
-
-
         var militaryId = $("#military-installation").val();
         var milStates = $("#milStates").val();
         var milCities = $("#milCities").val();
         var milBaseNotListed = $("#txtInstallationNotListed").val();
         //var variable = $("#").val();
 
-
-        //element mapping
-        uiForm.data('lead').FormID = 'form8';
+        /// element mapping
+        uiForm.data('lead').FormID = 'form5';
         uiForm.data('lead').FirstName = firstName;
         uiForm.data('lead').LastName = lastName;
         uiForm.data('lead').InterestCode = interestCode;
         uiForm.data('lead').EmailAddresses[0].Address = email;
-
         uiForm.data('lead').Addresses[0].PostalCode = ddlCountry == "US" ? zip : postal;
-
         uiForm.data('lead').DateOfBirth = dobMonth + "/" + dobDay + "/" + dobYear;
         uiForm.data('lead').Education = ddlEducation;
 
-        //addresses
+        /// addresses
         uiForm.data('lead').Addresses[0].AddressType = "L";
         uiForm.data('lead').Addresses[0].AddressLine1 = txtAddress;
         uiForm.data('lead').Addresses[0].City = txtCity;
         uiForm.data('lead').Addresses[0].State = ddlCountry == "US" ? ddlState : txtRegion;
         uiForm.data('lead').Addresses[0].Country = ddlCountry;
 
-        ////phone numbers
+        /// phone numbers
         uiForm.data('lead').PhoneNumbers[0].Number = phone;
         uiForm.data('lead').PhoneNumbers[0].Type = "C";
-
         uiForm.data('lead').PhoneNumbers[1].Number = txtAltPhone;
         uiForm.data('lead').PhoneNumbers[1].Type = "L";
 
-        ////education
+        /// education
         uiForm.data('lead').GradMonth = gradMonth;
         uiForm.data('lead').GradYear = selectChoiceGradYear;
         uiForm.data('lead').HighSchoolID = highschoolId;
@@ -425,14 +409,13 @@ $(document).ready(function () {
         uiForm.data('lead').HighSchoolCity = highSchoolCity;
         uiForm.data('lead').HighSchoolNotListed = hsNameNotListed != "" ? "HS: " + hsNameNotListed : "";
 
-
-        ////military
+        /// military
         uiForm.data('lead').IsMilitary = isMilitary;
         uiForm.data('lead').MilitaryID = militaryId;
         uiForm.data('lead').MilitarySeparation = militarySeparationDate;
         uiForm.data('lead').InstallationNotListed = milBaseNotListed != undefined ? milBaseNotListed : "";
 
-        //set status of highschool & military into comments field to populate CRM
+        /// set status of highschool & military into comments field to populate CRM
         if ($(hsNotAttended).is(':checked')) {
             tmpComments += " Never Attended High School" + " - ";
         }
@@ -442,21 +425,19 @@ $(document).ready(function () {
             tmpComments += " High School: " + hsNameNotListed + " - " + highSchoolCity + ", " + highSchoolState;
         }
 
-
         if (militaryId == "0") {
             tmpComments += " Military Base: " + milBaseNotListed + " - ";
         }
 
         uiForm.data('lead').Comments = tmpComments;
 
-        //set isComplete to true
+        /// set isComplete to true
         uiForm.data('lead').AdditionalInfo[0].Value = true;
         uiForm.data('lead').AdditionalInfo[1].Value = uid;
         uiForm.uiForm('post');
-
     }
 
-    //Form Wizard
+    /// Form Wizard
     $(function () {
         $("#utiForm").formwizard({
             disableUIStlyes: true,
@@ -469,7 +450,7 @@ $(document).ready(function () {
             textSubmit: 'Get Info!',
             validationEnabled: true,
             validationoptions: {},
-            focusFirstInput: true,
+            focusFirstInput: false,
             submitStepClass: 'formSubmit',
             formOptions: {
 
@@ -482,6 +463,13 @@ $(document).ready(function () {
 
 
                     var prospectName = $("#firstName").val();
+                    /// Create cookie with email address for C3 Metrics Leads Conversion Tag to use on thank you page
+                    var expiry = new Date(new Date().getTime() + 1 * 86400000).toUTCString();
+                    var tmp = document.domain.split('.');
+                    var rootDomain = '.uti.edu';
+                    if (tmp.length === 3) { rootDomain = '.' + tmp[1] + '.' + tmp[2]; } else { rootDomain = '.' + tmp[0] + '.' + tmp[1]; }
+                    document.cookie = 'c3mEmail=' + $("#email").val() + '; expires=' + expiry + '; path=/; domain=' + rootDomain + ';';
+                    /// End
                     $(".modal-info").text("Processing...");
                     $('#submitting').modal('show');
 
@@ -493,7 +481,8 @@ $(document).ready(function () {
         }
         );
     });
-    //Form Wizard Progress
+
+    /// Form Wizard Progress
     $("#utiForm").bind("step_shown", function (event, data) {
 
         if (data.currentStep == "area-of-interest") {
@@ -517,9 +506,6 @@ $(document).ready(function () {
             $(".progressbar-subtitle").text("One more step and you're done!");
         }
     });
-
-
-
  
     copyrightDate();
     digitFormat();
@@ -536,7 +522,7 @@ $(document).ready(function () {
     //-------------------------------------------------------------
 
 
-    //Field Mapping
+    /// Field Mapping
     var country = $('#ddlCountryPre');
     var country2 = $('#ddlCountry');
     var countries = $('#ddlCountryPre,#ddlCountry');
@@ -561,13 +547,12 @@ $(document).ready(function () {
 
     
 
-    //Country Change
+    /// Country Change
     countries.change(function () {
         //hide show US/Non-US Fields
         if ($(this).val() === "US") { showUsFields();} else {showNonUsFields(); }});
 
-
-    //Education Change
+    /// Education Change
     education.change(function () {
 
         $('select[name="dob[Day]"],select[name="dob[Month]"],select[name="dob[Year]"]').val('');
@@ -605,13 +590,13 @@ $(document).ready(function () {
         }
     });
 
-    //HS Not Listed Change - Set High School to Not Listed
+    /// HS Not Listed Change - Set High School to Not Listed
     $("#txtHighSchoolNotListed").on('keyup', function () {
         //console.log("Key Press");
         //hsName.val(0);
     });
 
-    //on city change
+    /// on city change
     $("#txtCity").change(function () {
 
         $("#txtCityPre").val($(this).val());
@@ -623,8 +608,7 @@ $(document).ready(function () {
 
     });
 
-
-    //On Postal Code Change
+    /// On Postal Code Change
     $("#postalCodePre").change(function () {
 
         $("#postalCode").val($(this).val());
@@ -636,9 +620,7 @@ $(document).ready(function () {
 
     });
 
-
-
-    //On Region Change
+    /// On Region Change
     $("#txtRegionPre").change(function () {
 
         $("#txtRegion").val($(this).val());
@@ -662,7 +644,7 @@ $(document).ready(function () {
     });
 
 
-    //HS State Change
+    /// HS State Change
     hsState.change(function () {
         hsCity.highschoolcity('clearlist');
 
@@ -680,7 +662,8 @@ $(document).ready(function () {
         }
 
     });
-    //HS City Change
+
+    /// HS City Change
     hsCity.change(function () {
         hsName.highschoolnames('clearlist');
         var hsStateCode = $('#high-school-state').val();
@@ -691,7 +674,7 @@ $(document).ready(function () {
             hsName.highschoolnames('lookup', hsStateCode, hsCityVal);
         }
     });
-    //*Military Radio Change*/
+    ///*Military Radio Change*/
     milStatus.change(function () {
         milInstallation.militarybases();
         var militaryStatus = $(this).val();
@@ -787,7 +770,8 @@ $(document).ready(function () {
         }
 
     });
-    //Military State Change
+
+    /// Military State Change
     milStates.change(function () {
         var milStateCode = $(this).val();
         milInstallation.militarybases();
@@ -795,7 +779,7 @@ $(document).ready(function () {
 
     });
 
-    //military installation change
+    /// military installation change
     milInstallation.change(function () {
 
         if (milInstallation.val() == 0 && milInstallation.val() != "") {
@@ -808,12 +792,11 @@ $(document).ready(function () {
         }
     });
 
-
-    //Populate Drop Down Lists on PageLoad
+    /// Populate Drop Down Lists on PageLoad
     country.countries();
     country2.countries();
 
-    //get TCPA
+    /// get TCPA
     $(".legalBox").legal();
 
     /*-----------Completers----------------------------------*/
@@ -857,7 +840,7 @@ $(document).ready(function () {
 
     });
 
-    //setup Leadguid id
+    /// setup Leadguid id
     function s4() {
         return Math.floor((1 + Math.random()) * 0x10000)
                    .toString(16)
@@ -870,7 +853,4 @@ $(document).ready(function () {
     }
 
     var uid = guid();
-
-   
-
 });

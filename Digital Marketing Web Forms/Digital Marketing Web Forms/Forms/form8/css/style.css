@@ -1,7 +1,6 @@
-﻿/*new*/
-.left-col {
-    width: 58.333% !important;
-}
+
+/*new*/
+
 /*new*/
 /*element.style {
     max-width: 120px !important;
@@ -9,15 +8,12 @@
 /*new*/
 body {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; /*Arial;*/
-    font-size: 14px;
+    font-size: 14px !important;
     line-height: 1.8em !important;
     /*font: 12px Arial !important;*/
     color: #333333;
 }
 
-.HalogenContentHeader {
-    border-bottom: 1px #a70e13 solid;
-}
 /*new*/
 .container {
     /*width: 1170px !important;*/
@@ -64,20 +60,6 @@ h2 {
     /*max-width: 1120px;*/
 }
 
-.requestMoreInfoHL {
-    left: 0;
-    position: relative;
-}
-
-
-.spacer {
-    height: 33px;
-}
-
-.footer-spacer {
-    padding: 30px;
-    color: #fff;
-}
 
 
 
@@ -85,9 +67,6 @@ h2 {
     max-width: 970px !important;
 }
 
-.well {
-    background: #fff;
-}
 
 
 .form-container {
@@ -130,14 +109,14 @@ h2 {
 }
 
 .subtitle {
-    font-size: 14px;
+    font-size: 14px !important;
 }
 
 .page-title, .subtitle {
     line-height: 1.4;
     margin-bottom: 25px;
-    padding-bottom: 0px;
-    border-bottom: 0px solid #cbcbcb;
+    padding-bottom: 0;
+    border-bottom: 0 solid #cbcbcb !important;
 }
 
 label {
@@ -167,10 +146,10 @@ label {
     margin-bottom: 9px;
 }
 
-/*.container .row {
+.container .row {
     margin-right: -15px;
     margin-left: -15px;
-}*/
+}
 
 /*.row .row {
     margin-left: -7px !important;
@@ -195,25 +174,6 @@ label {
     float: right;
 }
 
-
-
-    .navigation_button.ui-state-disabled {
-        display: inline-block;
-        padding: 1px 10px;
-        background: #053d70;
-        border: 1px solid #ddd;
-        border-radius: 1px;
-        color: #fff;
-        font: bold 14px Arial;
-        text-transform: uppercase;
-        border-top: solid 1px #61c8f0;
-        border-right: solid 1px #0248ba;
-        border-bottom: solid 1px #0030a8;
-        border-left: solid 1px #2098e0;
-        box-shadow: 0 1px 3px #999;
-        text-shadow: 0 -1px 1px #222;
-        opacity: .5;
-    }
 
     .navigation_button:hover {
         background: #053d70;
@@ -251,57 +211,6 @@ a.privacy-policy {
     padding-left: 0;
 }
 
-.padding-left-5 {
-    padding-left: 5px;
-}
-
-.padding-left-10 {
-    padding-left: 10px;
-}
-
-.padding-left-15 {
-    padding-left: 15px;
-}
-
-.padding-right-0 {
-    padding-right: 0;
-}
-
-.padding-right-5 {
-    padding-right: 5px;
-}
-
-.padding-right-10 {
-    padding-right: 10px;
-}
-
-.padding-right-15 {
-    padding-right: 15px;
-}
-
-.margin0 {
-    margin: 0;
-}
-
-.margin-right-10 {
-    margin-right: 10px;
-}
-
-.margin-left-neg20 {
-    margin-left: 20px;
-}
-
-.margin-neg-20 {
-    margin: -20px;
-}
-
-.margin-left-0 {
-    margin-left: 0;
-}
-
-.margin-right-0 {
-    margin-right: 0;
-}
 
 
 
@@ -309,13 +218,6 @@ a.privacy-policy {
     background: white;
 }
 
-.white-text {
-    color: #ffffff;
-}
-
-.uti-blue {
-    background: #196bb8;
-}
 /*Bootstrap*/
 
 input[disabled], select[disabled], textarea[disabled], input[readonly], select[readonly], textarea[readonly] {
@@ -342,14 +244,6 @@ label {
     margin-bottom: 0px;
 }
 
-.p1 {
-    padding-right: 0;
-}
-
-.p2, .p3 {
-    padding-right: 0;
-    padding-left: 10px;
-}
 
 input, select {
     margin-bottom: 0;
@@ -359,19 +253,11 @@ label {
     margin-bottom: 0px;
 }
 
-.p1 {
-    padding-right: 0;
-}
-
-.p2, .p3 {
-    padding-right: 0;
-    padding-left: 15px;
-}
-
 
 
 /*MEDIA QUERIES*/
 @media only screen and (max-width : 770px) {
+
 
 
     #phone1, #phone2, #phone3, #phoneAlt1, #phoneAlt2, #phoneAlt3 {
@@ -417,9 +303,6 @@ label {
 
 @media screen and (max-width : 768px) {
 
-    .img-responsive {
-        display: block;
-    }
 
     #phone1, #phone2, #phone3, #phoneAlt1, #phoneAlt2, #phoneAlt3 {
         width: 28%;
@@ -510,14 +393,7 @@ label {
   overflow: hidden;
 box-sizing: border-box;
 }
-
-
-
-
- .youtube-container { display: block; margin: 20px auto; width: 100%; max-width: 600px; }
-    .youtube-player { display: block; width: 100%; /* assuming that the video has a 16:9 ratio */ padding-bottom: 56.25%; overflow: hidden; position: relative; width: 100%; height: 100%; cursor: hand; cursor: pointer; display: block; }
-    img.youtube-thumb { bottom: 0; display: block; left: 0; margin: auto; max-width: 100%; width: 100%; position: absolute; right: 0; top: 0; height: auto }
-    div.play-button { height: 72px; width: 72px; left: 50%; top: 50%; margin-left: -36px; margin-top: -36px; position: absolute; background: url("http://i.imgur.com/TxzC70f.png") no-repeat; }
+ height: 72px; width: 72px; left: 50%; top: 50%; margin-left: -36px; margin-top: -36px; position: absolute; background: url("http://i.imgur.com/TxzC70f.png") no-repeat; }
     #youtube-iframe { width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
 
 .no-padding{ padding: 0;}

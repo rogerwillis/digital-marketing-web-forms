@@ -1,6 +1,5 @@
 ﻿/// Functions
 
-
 var copyrightDate = function () {
     //set copyright year dynamically
     var d = new Date();
@@ -34,17 +33,17 @@ var showNonUsFields = function () {
 };
 
 var digitFormat = function () {
-    //Only allow digits in these fields
+    /// Only allow digits in these fields
     $("#phone1, #phone2, #phone3, #phoneAlt1, #phoneAlt2, #phoneAlt3,#zipCodePre, #zipCode").keydown(function (e) {
         if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 ||
-            // Allow: Ctrl+A
+            /// Allow: Ctrl+A
             (e.keyCode == 65 && e.ctrlKey === true) ||
-            // Allow: home, end, left, right
+            /// Allow: home, end, left, right
             (e.keyCode >= 35 && e.keyCode <= 39)) {
-            // let it happen, don't do anything
+            /// let it happen, don't do anything
             return;
         }
-        // Ensure that it is a number and stop the keypress
+        /// Ensure that it is a number and stop the keypress
         if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
             e.preventDefault();
         }
@@ -59,13 +58,13 @@ var setMaxFieldLengths = function () {
 
 var autoTabbing = function () {
     //auto tabbing
-    //$('#phone').autoTab();
-    //$('#phoneAlt').autoTab();
+    $('#phone').autoTab();
+    $('#phoneAlt').autoTab();
 };
 
 var uiValidate = function () {
 
-    //VALIDATION INIT ---------------------------------------w---------
+    /// VALIDATION INIT
 
     var $validator = $("#utiForm").validate({
         'onkeyup': false,
@@ -73,7 +72,6 @@ var uiValidate = function () {
             // do other things for a valid form
             //console.log("Submit Handler");
         },
-
         errorPlacement: function (error, element) {
             if (element.is(':radio') || element.is(':checkbox')) {
                 error.insertBefore(element.next());
@@ -85,7 +83,6 @@ var uiValidate = function () {
                 error.insertAfter("#phone");
             } else {
                 error.insertAfter(element);
-
             }
 
             if (element.attr("id") == "phoneAlt1" || element.attr("id") == "phoneAlt2" || element.attr("id") == "phoneAlt3") {
@@ -93,13 +90,12 @@ var uiValidate = function () {
             } else {
                 error.insertAfter(element);
             }
-        },
 
+        },
         groups: {
             phoneNumber: "phone1 phone2 phone3",
             altPhoneNumber: "phoneAlt1 phoneAlt2 phoneAlt3"
         },
-
         rules: {
             email: {
                 required: true,
@@ -167,78 +163,83 @@ var uiValidate = function () {
             milStatus: {
                 required: true
             },
-            phone1: {
-                required: true,
-                digits: true,
-                minlength: 3,
-                maxlength: 3
-            },
-            phone2: {
-                required: true,
-                digits: true,
-                minlength: 3,
-                maxlength: 3
-            },
-            phone3: {
-                required: true,
-                digits: true,
-                minlength: 4,
-                maxlength: 4
-            },
-            phoneAlt1: {
-                minlength: {
+            phone1:
+                {
+                    required: true,
                     digits: true,
-                    param: 3,
-                    depends: function (element) {
-                        //return $('#phoneAlt1').val().length > 0;
-                        if ($('#phoneAlt1').val().length > 0) { return true; } else { return false; }
+                    minlength: 3,
+                    maxlength: 3
+                },
+            phone2:
+                {
+                    required: true,
+                    digits: true,
+                    minlength: 3,
+                    maxlength: 3
+                },
+            phone3:
+                {
+                    required: true,
+                    digits: true,
+                    minlength: 4,
+                    maxlength: 4
+                }
+            ,phoneAlt1:
+                {
+                    minlength: {
+                        digits: true,
+                        param: 3,
+                        depends: function (element) {
+                            //return $('#phoneAlt1').val().length > 0;
+                            if ($('#phoneAlt1').val().length > 0) { return true; } else { return false; }
+                        }
+                    },
+                    maxlength: {
+                        digits: true,
+                        param: 3,
+                        depends: function (element) {
+                            //return $('#phoneAlt1').val().length > 0;
+                            if ($('#phoneAlt1').val().length > 0) { return true; } else { return false; }
+                        }
                     }
                 },
-                maxlength: {
-                    digits: true,
-                    param: 3,
-                    depends: function (element) {
-                        //return $('#phoneAlt1').val().length > 0;
-                        if ($('#phoneAlt1').val().length > 0) { return true; } else { return false; }
-                    }
-                }
-            },
-            phoneAlt2: {
-                minlength: {
-                    digits: true,
-                    param: 3,
-                    depends: function (element) {
-                        //return $('#phoneAlt1').val().length > 0;
-                        if ($('#phoneAlt2').val().length > 0) { return true; } else { return false; }
-                    }
-                },
-                maxlength: {
-                    digits: true,
-                    param: 3,
-                    depends: function (element) {
-                        //return $('#phoneAlt1').val().length > 0;
-                        if ($('#phoneAlt2').val().length > 0) { return true; } else { return false; }
-                    }
-                }
-            },
-            phoneAlt3: {
-                minlength: {
-                    param: 4,
-                    depends: function (element) {
-                        //return $('#phoneAlt1').val().length > 0;
-                        if ($('#phoneAlt3').val().length > 0) { return true; } else { return false; }
+            phoneAlt2:
+                {
+                    minlength: {
+                        digits: true,
+                        param: 3,
+                        depends: function (element) {
+                            //return $('#phoneAlt1').val().length > 0;
+                            if ($('#phoneAlt2').val().length > 0) { return true; } else { return false; }
+                        }
+                    },
+                    maxlength: {
+                        digits: true,
+                        param: 3,
+                        depends: function (element) {
+                            //return $('#phoneAlt1').val().length > 0;
+                            if ($('#phoneAlt2').val().length > 0) { return true; } else { return false; }
+                        }
                     }
                 },
-                maxlength: {
-                    param: 4,
-                    depends: function (element) {
-                        //return $('#phoneAlt1').val().length > 0;
-                        if ($('#phoneAlt3').val().length > 0) { return true; } else { return false; }
+            phoneAlt3:
+                {
+                    minlength: {
+                        param: 4,
+                        depends: function (element) {
+                            //return $('#phoneAlt1').val().length > 0;
+                            if ($('#phoneAlt3').val().length > 0) { return true; } else { return false; }
+                        }
+                    },
+                    maxlength: {
+                        param: 4,
+                        depends: function (element) {
+                            //return $('#phoneAlt1').val().length > 0;
+                            if ($('#phoneAlt3').val().length > 0) { return true; } else { return false; }
+                        }
                     }
                 }
-            }
         },
-
         messages: {
             email2: {
                 equalTo: "Email Addresses Must Match",
@@ -261,8 +262,8 @@ var uiValidate = function () {
                 digits: "Please enter only digits for phone numbers",
                 minlength: "Please enter a valid Phone Number",
                 maxlength: "Please enter a valid Phone Number"
-            },
-            phoneAlt1: {
+            }
+            , phoneAlt1: {
                 digits: "Please enter only digits for phone numbers",
                 minlength: "Please enter a valid alternative Phone Number",
                 maxlength: "Please enter a valid alternative Phone Number"
@@ -283,6 +284,7 @@ var uiValidate = function () {
     jQuery.extend(jQuery.validator.messages, {
         required: "Required",
     });
+
 };
 
 var tcpaLangDisplay = function () {
@@ -298,55 +300,50 @@ var tcpaLangDisplay = function () {
         } else {
             $('.privacy-policy-text').css('display', 'none');
         }
+
     });
 };
 
 $(document).ready(function () {
-
-    //Form Widget Plugin Options
+    /// Form Widget Plugin Options
     var uiForm;
+    var url = window.location;
+    var pattern = /form(?!s)(?!ation)\w+/; // /form\d/;
+    var formid = url.toString().match(pattern)[0];
 
     uiForm = $('form').uiForm({
-
         // url: activeEnvironment.active + '/api/leads',
         posted: function (evt) {
-
-            var host = "http://" + window.location.host;
-
-            window.location.replace(host + "/forms/form8/thankyou/");
-            //window.location.replace("thankyou.html");
-
+            //window.location.replace(host + "/forms/form5/thankyou/");
+            var newLocation = "/forms/" + formid + "/thankyou/"
+            window.location.href = "http://" + host + newLocation;
         },
-
         failed: function () {
             $('#submitting').modal('hide');
             $("#error .modal-info").text("Sorry there has been an error in the form. Please try again later.");
             $('#error').modal('show');
         }
-
     });
 
     var submitForm = function () {
         var tmpComments = "";
 
-
-        //basic info
+        /// basic info
         var firstName = $("#firstName").val();
         var lastName = $("#lastName").val();
         var email = $("#email").val();
         var interestCode = $("#interest").val();
         var dobMonth = $("select[name='dob[Month]']").val();
-        var dobDay = $("select[name='dob[Day]']").val();;
-        var dobYear = $("select[name='dob[Year]']").val();;
+        var dobDay = $("select[name='dob[Day]']").val();
+        var dobYear = $("select[name='dob[Year]']").val();
 
-        //phone
+        /// phone
         var phone = "(" + $("#phone1").val() + ") " + $("#phone2").val() + "-" + $("#phone3").val();
 
-        //alt
+        /// alt
         var txtAltPhone = $("#phoneAlt1").val() && $("#phoneAlt2").val() && $("#phoneAlt3").val() != "" ? "(" + $("#phoneAlt1").val() + ") " + $("#phoneAlt2").val() + "-" + $("#phoneAlt3").val() : "";
 
-
-        //address
+        /// address
         var txtAddress = $("#txtAddress").val();
         var txtCity = $("#txtCity").val();
         var txtRegion = $("#txtRegion").val();
@@ -355,8 +352,7 @@ $(document).ready(function () {
         var postal = $("#postalCode").val();
         var ddlCountry = $("#ddlCountry").val();
 
-
-        //education
+        /// education
         var ddlEducation = $("#ddlEducation").val();
         var gradMonth = $("#gradMonth").val();
         var selectChoiceGradYear = $("#gradYear").val();
@@ -366,8 +362,7 @@ $(document).ready(function () {
         var chkNoHSAttended = $("#chkNoHSAttended").val();
         var hsNameNotListed = $("#txtHighSchoolNotListed").val();
 
-
-        //military
+        /// military
         var isMilitary = $("input[name=milStatus]:checked").val();
         var militarySeparationMonth = $("select[name='MilitarySeparationMonth']").val();
         var militarySeparationYear = $("select[name='MilitarySeparationYear']").val();
@@ -387,8 +382,11 @@ $(document).ready(function () {
         //var variable = $("#").val();
 
 
-        //element mapping
-        uiForm.data('lead').FormID = 'form8';
+        /// element mapping        
+        console.log('formid=' + formid);
+        uiForm.data('lead').FormID = formid;        
+        //uiForm.data('lead').FormID = formid;
+
         uiForm.data('lead').FirstName = firstName;
         uiForm.data('lead').LastName = lastName;
         uiForm.data('lead').InterestCode = interestCode;
@@ -399,21 +397,21 @@ $(document).ready(function () {
         uiForm.data('lead').DateOfBirth = dobMonth + "/" + dobDay + "/" + dobYear;
         uiForm.data('lead').Education = ddlEducation;
 
-        //addresses
+        /// addresses
         uiForm.data('lead').Addresses[0].AddressType = "L";
         uiForm.data('lead').Addresses[0].AddressLine1 = txtAddress;
         uiForm.data('lead').Addresses[0].City = txtCity;
         uiForm.data('lead').Addresses[0].State = ddlCountry == "US" ? ddlState : txtRegion;
         uiForm.data('lead').Addresses[0].Country = ddlCountry;
 
-        ////phone numbers
+        /// phone numbers
         uiForm.data('lead').PhoneNumbers[0].Number = phone;
         uiForm.data('lead').PhoneNumbers[0].Type = "C";
 
         uiForm.data('lead').PhoneNumbers[1].Number = txtAltPhone;
         uiForm.data('lead').PhoneNumbers[1].Type = "L";
 
-        ////education
+        /// education
         uiForm.data('lead').GradMonth = gradMonth;
         uiForm.data('lead').GradYear = selectChoiceGradYear;
         uiForm.data('lead').HighSchoolID = highschoolId;
@@ -422,13 +420,13 @@ $(document).ready(function () {
         uiForm.data('lead').HighSchoolNotListed = hsNameNotListed != "" ? "HS: " + hsNameNotListed : "";
 
 
-        ////military
+        /// military
         uiForm.data('lead').IsMilitary = isMilitary;
         uiForm.data('lead').MilitaryID = militaryId;
         uiForm.data('lead').MilitarySeparation = militarySeparationDate;
         uiForm.data('lead').InstallationNotListed = milBaseNotListed != undefined ? milBaseNotListed : "";
 
-        //set status of highschool & military into comments field to populate CRM
+        /// set status of highschool & military into comments field to populate CRM
         if ($(hsNotAttended).is(':checked')) {
             tmpComments += " Never Attended High School" + " - ";
         }
@@ -445,14 +443,13 @@ $(document).ready(function () {
 
         uiForm.data('lead').Comments = tmpComments;
 
-        //set isComplete to true
+        /// set isComplete to true
         uiForm.data('lead').AdditionalInfo[0].Value = true;
         uiForm.data('lead').AdditionalInfo[1].Value = uid;
         uiForm.uiForm('post');
-
     }
 
-    //Form Wizard
+    /// Form Wizard
     $(function () {
         $("#utiForm").formwizard({
             disableUIStlyes: true,
@@ -468,42 +465,28 @@ $(document).ready(function () {
             focusFirstInput: true,
             submitStepClass: 'formSubmit',
             formOptions: {
-
                 dataType: 'json',
                 resetForm: true,
                 beforeSerialize: function () {
                 },
-
                 beforeSubmit: function () {
-
-
                     var prospectName = $("#firstName").val();
-                    /// Create cookie with email address for C3 Metrics Leads Conversion Tag to use on thank you page
-                    var expiry = new Date(new Date().getTime() + 1 * 86400000).toUTCString();
-                    var tmp = document.domain.split('.');
-                    var rootDomain = '.uti.edu';
-                    if (tmp.length === 3) { rootDomain = '.' + tmp[1] + '.' + tmp[2]; } else { rootDomain = '.' + tmp[0] + '.' + tmp[1]; }
-                    document.cookie = 'c3mEmail=' + $("#email").val() + '; expires=' + expiry + '; path=/; domain=' + rootDomain + ';';
-                    /// End
-
                     $(".modal-info").text("Processing...");
                     $('#submitting').modal('show');
-
                     submitForm();
-
                 },
                 beforeSend: function (data) { },
             }
         }
         );
     });
-    //Form Wizard Progress
+
+    /// Form Wizard Progress
     $("#utiForm").bind("step_shown", function (event, data) {
 
         if (data.currentStep == "area-of-interest") {
             $(".progress-bar").css({ width: '25%' });
             $(".the-title").text("A New Career Path Starts Here");
-
         }
         if (data.currentStep == "location") {
             $(".progress-bar").css({ width: '45%' });
@@ -529,6 +512,15 @@ $(document).ready(function () {
     tcpaLangDisplay();
 
     $('.step').fadeIn(1200);
+
+    /* fake the google autofill problem */
+    //$('#phone1').val('(55');
+    //$('#phone2').val('5) ');
+    //$('#phone3').val('555-');
+    //$('#phoneAlt1').val('222-222-2222');
+    //$('#phoneAlt2').val('(222) 222-2222');
+    //$('#phoneAlt3').val('222.222.2222');
+    /*--------------------- */
 
     uiValidate();
 
@@ -827,7 +819,7 @@ $(document).ready(function () {
     $('#zipCode').zipCompleter({
         'afterUpdate': function () {
 
-            $('#zipCodPre').val($('#zipCode').val());
+            $('#zipCodePre').val($('#zipCode').val());
         }
     });
 

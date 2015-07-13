@@ -1,11 +1,9 @@
-﻿<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
           "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html>
 <head>
     <title>JQuery Form Wizard</title>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    </meta>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
@@ -79,6 +77,12 @@
         #data {
             overflow: auto;
         }
+
+        input#back:disabled {
+            display: none;
+        }
+
+        .status { }
     </style>
 </head>
 <body>
@@ -87,7 +91,7 @@
 
         <hr />
         <h5 id="status"></h5>
-        <form id="demoForm" method="post" action="json.html" class="bbq">
+        <form id="utiForm" method="post" action="json.html" class="bbq">
             <div id="fieldWrapper">
                 <div class="step" id="first">
                     <span class="font_normal_07em_black">Area of Interest</span><br />
@@ -96,7 +100,7 @@
 
                     <label class="input select" id="show-elements-interest">
                         <select name="Interest" id="Interest" required=required>
-                            <option value="none"  disabled="" required=required>select area of interest</option>
+                            <option value="none" disabled="" required=required>select area of interest</option>
                             <option value="AU" selected="">Automotive Technician</option>
                             <option value="MO">Motorcycle Technician</option>
                             <option value="DI">Diesel / Industrial</option>
@@ -114,18 +118,19 @@
                         <label for="country" class="alt">Country:</label>
                         <select id="country" name="country" class="form-control" required=required></select>
                     </div>
-    
+
                     <!-- zip code 1-->
                     <div class="span4 unit">
-                        <label class="label">Zip code</label>
+                        <label class="label zip-label">Zip Code</label>
                         <div class="input">
                             <label class="icon-right" for="zipCodePre"> <i class="fa fa-bookmark-o"></i> </label>
                             <input type="text" id="zipCodePre" name="zip" required=required />
+                            <input id="postalCodePre" name="postalCodePre" required="required" class="hidden" maxlength="10" />
                         </div>
 
                     </div>
                 </div>
-                <div id="military-education" class="step">
+                <div id="personal-info" class="step">
                     <span class="font_normal_07em_black">Personal Information</span><br />
 
                     <!-- start name -->
@@ -148,6 +153,42 @@
                                 <input type="text" id="lastName" name="lastName" required=required />
                             </div>
                         </div>
+
+
+                        <hr />
+
+                        <div class="span4 unit">
+                            <label class="label zip-label">Zip Code</label>
+
+                            <label class="icon-right" for="zipCode"> <i class="fa fa-bookmark-o"></i> </label>
+                            <input type="text" id="zipCode" name="zip" required=required />
+                            <input id="postalCode" name="postalCode" required="required" class="hidden" maxlength="10" />
+
+
+
+                        </div>
+
+
+                        <div class="input">
+                            <label class="label">City</label>
+                            <input type="text" id="city" name="city" required=required maxlength="100" />
+
+                        </div>
+
+
+                        <div class="span4 input">
+                            <label class="state-region-label label"> State:  </label>
+                            <select id="state" name="state" required=required>
+                                <option selected=selected>
+                                    select state
+                                </option>
+                            </select>
+                            <input id="region" name="region" class="hidden" required="required" maxlength="100" />
+
+                        </div>
+
+
+                        <hr />
 
                         <!-- phone / email -->
                         <div class="span12 unit">
@@ -191,36 +232,6 @@
                         </div>
                     </div>
 
-
-
-                    <hr />
-
-                    <div class="span4 unit">
-                        <label class="label">Zip code</label>
-                        <div class="input">
-                            <label class="icon-right" for="zipCode"> <i class="fa fa-bookmark-o"></i> </label>
-                            <input type="text" id="zipCode" name="zip" required=required />
-                        </div>
-
-                    </div>
-
-
-                    <div class="input">
-                        City
-                        <input type="text" id="city" name="city" required=required />
-                    </div>
-
-
-                    <div class="input">
-                        <select id="state" name="state" required=required>
-                            <option selected=selected>
-                                select state
-                            </option>
-                        </select>
-                    </div>
-
-
-
                 </div>
 
                 <!-- Branching -->
@@ -237,14 +248,16 @@
 
 
                     <div class="container-mil-name">
-                        <select id="military-installation" name="military-installation" required=required></select>
+                        <select id="military-installation" name="military-installation" required=required>
+                            <option>Select Your Base</option>
+                        </select>
                     </div>
                     <hr />
 
                     <div class="container-installation-not-listed hidden">
                         <label>
                             If your installation is not listed, please type it here:
-                            <input name="hs-not-listed" id="hs-not-listed" required=required />
+                            <input name="mil-not-listed" id="mil-not-listed" required=required />
                         </label>
                     </div>
 
@@ -270,48 +283,40 @@
                     </select>
                     <hr />
                     <div class="container-education hidden">
-                        <div class="container-grad-date">
-                            <label for="hs-grad-date">
-                                Graduation Date
-                                <input name="hs-grad-gate" id="hs-grad-date" />
-                            </label>
-                        </div>
-                        <hr />
-                        <div class="container-state">
-                            <select id="hs-state" name="hs-state">
-                                <option> Select State </option>
-                                <option value="state1">State1</option>
-                                <option value="state2">State2</option>
-                                <option value="state3">State3</option>
-                            </select>
-                        </div>
-                        <hr />
-                        <div class="container-hs-city">
-                            <select id="hs-city" name="hs-city">
-                                <option> Select City </option>
-                                <option value="city1">City1</option>
-                                <option value="city2">City2</option>
-                                <option value="city3">City3</option>
-                            </select>
-                        </div>
-                        <hr />
-                        <div class="container-hs-name">
-                            <select id="hs-city" name="hs-name">
-                                <option> Select City </option>
-                                <option value="city1">City1</option>
-                                <option value="city2">City2</option>
-                                <option value="city3">City3</option>
-                                <option value="not-listed">High School Not Listed</option>
-                            </select>
-                        </div>
-                        <hr />
+                        <div class="if-ged">
+                            <div class="container-grad-date">
+                                <label for="hs-grad-date">
+                                    Graduation Date
+                                    <input name="hs-grad-date" id="hs-grad-date" required=required />
+                                </label>
+                            </div>
+                            <hr />
+                            <div class="container-state">
+                                <select id="hs-state" name="hs-state" required=required></select>
+                            </div>
+                            <hr />
+                            <div class="container-hs-city">
+                                <select id="hs-city" name="hs-city" required=required></select>
+                            </div>
+                            <hr />
+                            <div class="container-hs-name">
+                                <select id="high-school-name" name="high-school-name" required=required></select>
+                            </div>
+                            <hr />
 
-                        <div class="container-hs-not-listed hidden">
-                            <label>
-                                High School Not Listed?
-                                <input name="hs-not-listed" id="hs-not-listed" />
-                            </label>
+                            <div class="container-hs-not-listed hidden">
+                                <label>
+                                    High School Not Listed?
+                                    <input name="hs-not-listed" id="hs-not-listed" required=required />
+                                </label>
+                            </div>
                         </div>
+                        <div class="container-hs-never-attended hidden">
+                            <input id="chkNoHighSchoolAttended" name="chkNoHighSchoolAttended" type="checkbox" />
+                            I never attended high school.
+                        </div>
+
+
                         <hr />
 
                     </div>
@@ -322,20 +327,47 @@
                 <input class="navigation_button" id="next" value="Next" type="submit" />
             </div>
             <div class="status"></div>
+            
+            
+            <!-- MODALS -->
+        
+            <div class="modal fade" id="error" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false" aria-labelledby="submittingLabel" aria-hidden="true" style="overflow-y: auto; font-size: 19px; text-align: center;">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <div class="modal-info"> </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="submitting" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false" aria-labelledby="submittingLabel" aria-hidden="true" style="overflow-y: auto; font-size: 19px; text-align: center;">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <div class="modal-info"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
         </form>
         <hr />
         <p id="data"></p>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery-ui-1.8.5.custom.min.js"></script>
+    <script type="text/javascript" src="http://utiforms.s3.amazonaws.com/demo/branch-form-test/js/jquery-ui-1.8.5.custom.min.js"></script>
     <script type="text/javascript" src="http://utiforms.s3.amazonaws.com/form6/js/jquery-migrate-1.2.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/jquery.form.js"></script>
-    <script type="text/javascript" src="js/jquery.validate.v13.js"></script>
-    <script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
-    <script type="text/javascript" src="js/bbq.js"></script>
+    <script type="text/javascript" src="http://utiforms.s3.amazonaws.com/demo/branch-form-test/js/jquery.form.js"></script>
+    <script type="text/javascript" src="http://utiforms.s3.amazonaws.com/demo/branch-form-test/js/jquery.validate.v13.js"></script>
+    <script type="text/javascript" src="http://utiforms.s3.amazonaws.com/demo/branch-form-test/js/jquery.maskedinput.min.js"></script>
+    <script type="text/javascript" src="http://utiforms.s3.amazonaws.com/demo/branch-form-test/js/bbq.js"></script>
 
-    <script type="text/javascript" src="js/jquery.form.wizard.js"></script>
+    <script type="text/javascript" src="http://utiforms.s3.amazonaws.com/demo/branch-form-test/js/jquery.form.wizard.js"></script>
 
     <!-- API JS -->
     <script type="text/javascript" src="http://utiforms.s3.amazonaws.com/common/js/environment.config.js"></script>
@@ -355,10 +387,6 @@
     <script type="text/javascript" src="http://utiforms.s3.amazonaws.com/common/js/jquery.uti.ui.forms.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-url-parser/2.3.1/purl.min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.2/jquery.xdomainrequest.min.js"></script>
-
-
-
-
 
 </body>
 </html>
